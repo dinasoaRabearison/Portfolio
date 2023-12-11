@@ -1,0 +1,52 @@
+
+{% extends "base_portfolio.html" %}
+{% load static %}
+    {% block titre %}
+        <h3>Qui-suis-je?</h3>
+    {% endblock %}
+    {% block contenu %}
+        <section class="row">
+            <section class="w-25">
+                <img class="w-100 h-110" src="{% static 'img/img1.png' %}" />
+            </section>
+            <section class="card w-75 ">
+                <h4 class="card-header row">Rabearison Dinasoa Abraham</h4>
+                <section class="card-body row">
+                    <aside class=" w-25">
+                        <article>
+                            <h5>Concepteur Développeur d'Application Numérique</h5>
+                        </article>
+                        <article>
+                            Je suis passionné par le développement d'application.
+                            Mais j'ai préféré débuter par étudier les systèmes et réseaux informatiques.
+                            Une fois mon diplôme de Licence en main. J'ai intégré le centre de formation
+                             d'Inclusiv Academy pour y renforcer mes bases en développement d'applications
+                            et me spécialiser en DevOps.
+                        </article>
+                    </aside>
+                    <aside class="w-75">
+                        <table class="table">
+                            <tr>
+                                <td>Adresse</td>
+                                <td>Lot VA 26 MBis A Tsiadana</td>
+                            </tr>
+                            <tr>
+                                <td>Téléphone</td>
+                                <td>034 93 578 08</td>
+                            </tr>
+                            <tr>
+                                <td>E-mail</td>
+                                <td>dinasoa.rabearison@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>Linked In</td>
+                                <td>https://www.linkedin.com/in/dinasoa-abraham-rabearison-1364a9271</td>
+                            </tr>
+                        </table>
+                    </aside>
+                </section>
+            </section>
+            
+            
+        </section>
+    {% endblock %}

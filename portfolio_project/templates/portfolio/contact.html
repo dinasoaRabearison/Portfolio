@@ -1,0 +1,14 @@
+{% extends "base_portfolio.html" %}
+{% load static %}
+    {% block titre %}
+        <h3 class="text-center">Pour me joindre...</h3>
+    {% endblock %}
+    {% block contenu %}
+    <form class="w-50 mx-auto">
+        <label class="form-label">E-mail</label>
+        <input type="mail" value="" class="form-control" placeholder="Votre e-mail ici" />
+        <label class="form-label">Message</label>
+        <textarea class="form-control" style="min-height: 300px;" placeholder="Votre message ici"></textarea>
+        <input type="submit" class="btn btn-primary m-1" value="Envoyer"/>
+    </form>
+    {% endblock %}

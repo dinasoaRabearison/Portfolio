@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+        <title>Portfolio</title>
+    </head>
+    <body class="container-fluid">
+        <header class="row">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-primary  p-4">
+                <a class="navbar-brand" href="../presentation/">
+                    <h1>
+                        Portfolio
+                    </h1>
+                </a>
+                <div class="navbar-nav">
+                    <a class="nav-link" href="../presentation/"><span class="sr-only">Présentation</span></a>
+                    <a class="nav-link " href="../experience/">Expérience</a>
+                    <a class="nav-link"  href="../competence/">Compétence</a>
+                    <a class="nav-link"  href="../loisir/">Loisirs</a>
+                    <a class="nav-link"  href="../contact/">Contactez-moi</a>
+                    <a class="nav-link"  href="../login/">Visiteur</a>
+                </div>
+            </nav>
+        </header>
+        <section>
+            {% block titre %}
+            {% endblock %}
+            {% block contenu %}
+            {% endblock %}
+        </section>
+        <footer class="row bg-primary  text-center text-light p-5">
+            <p>Copyright @ Dinasoa-2023</p>
+        </footer>
+    </body>
+
+</html>

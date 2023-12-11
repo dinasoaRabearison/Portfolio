@@ -1,0 +1,32 @@
+{% extends "base_portfolio.html" %}
+{% load static %}
+    {% block titre %}
+        <h3 class="text-center">Espace visiteur</h3>
+    {% endblock %}
+    {% block contenu %}
+    <form class="w-50 mx-auto" method="post" action="{% url 'portfolio:inscription' %}">
+        {% csrf_token %}
+        <h4>Inscription</h4>
+        {% for field in form %}
+        {{ field.label_tag }}
+        <input
+          type="{% if 'password' in field.label_tag %}password{% else %}text{% endif %}"
+          name="{{ field.html_name }}"
+          class="form-control"
+          maxlength="{% if 'username' in field.label_tag %}150{% endif %}"
+          id="{{ field.id_for_label }}"
+          required
+          />
+          {% if field.errors %} 
+          {% for error in field.errors %}
+          <p class="text-red">{{ error|escape }}</p>
+          {% endfor %} 
+          {% endif %}
+          {% endfor %} 
+        <input type="submit" class="btn btn-success m-2" value="Envoyer"/>
+        <input type="reset" class="btn btn-danger m-2" value="Annuler"/>
+        <div class="form-control text-center">
+            <p>Vous n'avez pas encore de compte? <a href="../login/">s'inscrire</a></p>
+        </div>
+    </form>
+    {% endblock %}

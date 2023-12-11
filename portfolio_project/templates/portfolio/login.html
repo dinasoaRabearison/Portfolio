@@ -1,0 +1,19 @@
+{% extends "base_portfolio.html" %}
+{% load static %}
+    {% block titre %}
+        <h3 class="text-center">Espace visiteur</h3>
+    {% endblock %}
+    {% block contenu %}
+    <form class="w-50 mx-auto">
+        <h4>Login</h4>
+        <label class="form-label">Username</label>
+        <input type="mail" value="" class="form-control" placeholder="Username" />
+        <label class="form-label">Password</label>
+        <input type="mail" value="" class="form-control" placeholder="Password" />
+        <input type="submit" class="btn btn-success m-1" value="Envoyer"/>
+        <input type="reset" class="btn btn-danger m-1" value="Annuler"/>
+        <div class="form-control text-center">
+            <p>Vous n'avez pas encore de compte, <a href="../inscription/">s'inscrire</a></p>
+        </div>
+    </form>
+    {% endblock %}

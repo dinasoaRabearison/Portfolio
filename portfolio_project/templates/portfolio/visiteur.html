@@ -1,0 +1,12 @@
+{% extends "base_portfolio.html" %}
+{% load static %}
+    {% block titre %}
+        <h3 class="text-center">Espace visiteur</h3>
+    {% endblock %}
+    {% block contenu %}
+    <form class="w-50 mx-auto">
+        <label class="form-label">Observation</label>
+        <textarea class="form-control" style="min-height: 300px;" placeholder="Vos observations ici..."></textarea>
+        <input type="submit" class="btn btn-primary m-1" value="Envoyer"/>
+    </form>
+    {% endblock %}
